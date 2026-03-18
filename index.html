@@ -449,6 +449,20 @@ section{position:relative;z-index:1;padding:100px 40px;}
   box-shadow:0 0 18px rgba(0,212,255,0.18);
 }
 .f-input::placeholder,.f-textarea::placeholder{color:rgba(175,198,233,0.35);}
+.f-input:invalid:not(:placeholder-shown),
+.f-textarea:invalid:not(:placeholder-shown){
+  border-color:rgba(255,80,80,0.6);
+  box-shadow:0 0 12px rgba(255,80,80,0.15);
+}
+.f-input:valid:not(:placeholder-shown),
+.f-textarea:valid:not(:placeholder-shown){
+  border-color:rgba(0,212,255,0.4);
+}
+.f-input[required]:focus:invalid,
+.f-textarea[required]:focus:invalid{
+  border-color:rgba(255,80,80,0.7);
+  box-shadow:0 0 15px rgba(255,80,80,0.2);
+}
 .f-textarea{height:110px;resize:vertical;}
 .f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .f-submit{
@@ -973,8 +987,8 @@ body.lang-en .hero-en{display:block !important;}
       <p style="display:none;"><input name="bot-field"></p>
       <div class="f-row">
         <div class="f-group">
-          <label class="f-lbl az-c">Ad Soyad</label>
-          <label class="f-lbl en-c">Full Name</label>
+          <label class="f-lbl az-c">Ad Soyad <span style="color:#00D4FF;">*</span></label>
+          <label class="f-lbl en-c">Full Name <span style="color:#00D4FF;">*</span></label>
           <input class="f-input" type="text" name="name" required placeholder="Ad Soyad" data-ph-az="Ad Soyad" data-ph-en="Full Name">
         </div>
         <div class="f-group">
@@ -984,19 +998,23 @@ body.lang-en .hero-en{display:block !important;}
         </div>
       </div>
       <div class="f-group">
-        <label class="f-lbl">Email</label>
+        <label class="f-lbl">Email <span style="color:#00D4FF;">*</span></label>
         <input class="f-input" type="email" name="email" required placeholder="email@numune.az" data-ph-az="email@numune.az" data-ph-en="email@example.com">
       </div>
       <div class="f-group">
-        <label class="f-lbl az-c">Telefon</label>
-        <label class="f-lbl en-c">Phone</label>
-        <input class="f-input" type="tel" name="phone" placeholder="+994 XX XXX XX XX" data-ph-az="+994 XX XXX XX XX" data-ph-en="+994 XX XXX XX XX">
+        <label class="f-lbl az-c">Telefon <span style="color:#00D4FF;">*</span></label>
+        <label class="f-lbl en-c">Phone <span style="color:#00D4FF;">*</span></label>
+        <input class="f-input" type="tel" name="phone" required placeholder="+994 XX XXX XX XX" data-ph-az="+994 XX XXX XX XX" data-ph-en="+994 XX XXX XX XX">
       </div>
       <div class="f-group">
-        <label class="f-lbl az-c">Mesajınız</label>
-        <label class="f-lbl en-c">Your Message</label>
+        <label class="f-lbl az-c">Mesajınız <span style="color:#00D4FF;">*</span></label>
+        <label class="f-lbl en-c">Your Message <span style="color:#00D4FF;">*</span></label>
         <textarea class="f-textarea" name="message" required placeholder="IT ehtiyaclariniz haqqinda qisaca yazin..." data-ph-az="IT ehtiyaclariniz haqqinda qisaca yazin..." data-ph-en="Briefly describe your IT needs..."></textarea>
       </div>
+      <p style="font-size:11px;color:#7FA2C9;margin-top:2px;font-family:'JetBrains Mono',monospace;">
+        <span class="az-c"><span style="color:#00D4FF;">*</span> məcburi sahələr</span>
+        <span class="en-c"><span style="color:#00D4FF;">*</span> required fields</span>
+      </p>
       <button class="f-submit" type="submit" id="submitBtn">Sorğu göndər →</button>
     </form>
   </div>
@@ -1054,6 +1072,51 @@ body.lang-en .hero-en{display:block !important;}
 </footer>
 
 <script>
+// Custom form validation messages
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.querySelector('form[name="contact"]');
+  if (!form) return;
+
+  var isEn = document.body.classList.contains('lang-en');
+
+  var msgs = {
+    name:    { az: 'Ad Soyad mütləq doldurulmalıdır',    en: 'Full name is required' },
+    email:   { az: 'Email mütləq doldurulmalıdır',        en: 'Email is required' },
+    phone:   { az: 'Telefon nömrəsi mütləq doldurulmalıdır', en: 'Phone number is required' },
+    message: { az: 'Mesaj mütləq doldurulmalıdır',        en: 'Message is required' }
+  };
+
+  form.addEventListener('submit', function(e) {
+    var lang = document.body.classList.contains('lang-en') ? 'en' : 'az';
+    var fields = ['name', 'email', 'phone', 'message'];
+    var firstInvalid = null;
+
+    fields.forEach(function(name) {
+      var el = form.querySelector('[name="'+name+'"]');
+      if (!el) return;
+      if (!el.value.trim()) {
+        el.setCustomValidity(msgs[name][lang]);
+        if (!firstInvalid) firstInvalid = el;
+      } else {
+        el.setCustomValidity('');
+      }
+    });
+
+    if (firstInvalid) {
+      e.preventDefault();
+      firstInvalid.reportValidity();
+      firstInvalid.focus();
+    }
+  });
+
+  // Clear custom validity on input
+  form.querySelectorAll('input, textarea').forEach(function(el) {
+    el.addEventListener('input', function() {
+      el.setCustomValidity('');
+    });
+  });
+});
+
 // Email - Cloudflare bypass
 (function(){
   var e = 'info' + '@' + 'hybridlab.com.az';
