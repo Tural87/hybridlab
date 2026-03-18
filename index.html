@@ -824,8 +824,8 @@ body.lang-en .hero-en{display:block !important;}
 <div class="divider"></div>
 
 <section class="why-sec" id="why">
-  <div class="sec-label az-c reveal">Sizin üçün doğru IT tərəfdaş</div>
-  <div class="sec-label en-c reveal">The right IT partner for you</div>
+  <div class="sec-label az-c reveal">Niyə bizi seçin</div>
+  <div class="sec-label en-c reveal">Why choose us</div>
   <h2 class="sec-title az-c reveal">Niyə HybridLab?</h2>
   <h2 class="sec-title en-c reveal">Why choose HybridLab?</h2>
   <p class="sec-desc az-c reveal">Fərdi yanaşma və sürətli reaksiya — bizim ən böyük üstünlüyümüz.</p>
@@ -957,7 +957,7 @@ body.lang-en .hero-en{display:block !important;}
         <div class="cnt-icon"><i class="fa-solid fa-envelope"></i></div>
         <div>
           <div class="cnt-lbl">Email</div>
-          <div class="cnt-val"><a href="/cdn-cgi/l/email-protection#670e090108270f1e05150e030b06054904080a49061d"><span class="__cf_email__" data-cfemail="254c4b434a654d5c47574c414944470b464a480b445f">[email&#160;protected]</span></a></div>
+          <div class="cnt-val" id="emailVal"></div>
         </div>
       </div>
       <div class="cnt-item reveal">
@@ -1040,11 +1040,11 @@ body.lang-en .hero-en{display:block !important;}
       <h4 class="en-c">Navigation</h4>
       <a href="#about" class="az-c">Haqqımızda</a>
       <a href="#tech" class="az-c">Texnologiyalar</a>
-      <a href="#why" class="az-c">Sizin üçün doğru IT tərəfdaş</a>
+      <a href="#why" class="az-c">Niyə bizi seçin</a>
       <a href="#contact" class="az-c">Əlaqə</a>
       <a href="#about" class="en-c">About</a>
       <a href="#tech" class="en-c">Technologies</a>
-      <a href="#why" class="en-c">The right IT partner for you</a>
+      <a href="#why" class="en-c">Why choose us</a>
       <a href="#contact" class="en-c">Contact</a>
     </div>
   </div>
@@ -1053,7 +1053,20 @@ body.lang-en .hero-en{display:block !important;}
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+// Email - Cloudflare bypass
+(function(){
+  var e = 'info' + '@' + 'hybridlab.com.az';
+  var h = '<a href="mailto:'+e+'" style="color:#00D4FF;text-decoration:none;transition:all 0.2s;">'+e+'</a>';
+  function setEmail(){
+    var el=document.getElementById('emailVal');
+    if(el) el.innerHTML=h;
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',setEmail);
+  } else { setEmail(); }
+})();
+
 function setLang(lang) {
   document.body.className = lang === 'en' ? 'lang-en' : '';
 
