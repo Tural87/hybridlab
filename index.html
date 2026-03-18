@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HYBRIDLAB | İT İnfrastruktur və Təhlükəsizlik Həlləri</title>
+<title>HYBRIDLAB | İT İnfrastruktur və Texniki Dəstək</title>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- Favicon: terminal simvolu SVG -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23080c10'/><polyline points='6,10 14,16 6,22' fill='none' stroke='%2300d4ff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><line x1='17' y1='22' x2='26' y2='22' stroke='%2300d4ff' stroke-width='3' stroke-linecap='round'/></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -15,12 +14,12 @@ body{background:#080c10;color:#e8edf4;font-family:'Manrope','Segoe UI',sans-seri
 body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:rgba(8,12,16,0.92);backdrop-filter:blur(20px);border-bottom:1px solid #1e2d3d;flex-wrap:wrap;gap:10px;}
-.logo{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:#e8edf4;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:rgba(8,12,16,0.95);backdrop-filter:blur(20px);border-bottom:1px solid #1e2d3d;flex-wrap:wrap;gap:10px;}
+.logo{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:#e8edf4;}
 .logo span{color:#00d4ff;}
 .nav-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
-.nav-links{display:flex;gap:24px;list-style:none;}
-.nav-links a{font-size:13px;letter-spacing:0.5px;color:#6b7e94;text-decoration:none;transition:color 0.2s;font-weight:600;}
+.nav-links{display:flex;gap:22px;list-style:none;}
+.nav-links a{font-size:12px;letter-spacing:0.5px;color:#6b7e94;text-decoration:none;transition:color 0.2s;font-weight:600;text-transform:uppercase;}
 .nav-links a:hover{color:#00d4ff;}
 .lang-wrap{display:flex;gap:6px;}
 .lang-btn{background:transparent;border:1px solid #1e2d3d;color:#6b7e94;padding:5px 12px;font-size:12px;font-family:'JetBrains Mono',monospace;cursor:pointer;transition:all 0.2s;}
@@ -36,14 +35,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .hero{min-height:100vh;display:flex;align-items:center;padding:120px 40px 80px;position:relative;overflow:hidden;}
 .hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,102,255,0.12) 0%,transparent 70%);top:-200px;right:-150px;pointer-events:none;}
 .hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.08) 0%,transparent 70%);bottom:-100px;left:100px;pointer-events:none;}
-.hero-content{position:relative;z-index:1;max-width:700px;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);padding:8px 16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#00d4ff;margin-bottom:32px;}
+.hero-content{position:relative;z-index:1;max-width:680px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);padding:8px 16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#00d4ff;margin-bottom:28px;}
 .badge-dot{width:8px;height:8px;border-radius:50%;background:#00ff88;animation:blink 1.5s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
-.hero-title{font-size:clamp(40px,7vw,80px);font-weight:800;line-height:1;letter-spacing:-2px;margin-bottom:24px;}
-.hero-title .outline{color:transparent;-webkit-text-stroke:1px rgba(0,212,255,0.35);}
+.hero-title{font-size:clamp(36px,6vw,72px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:20px;}
 .hero-title .grad{background:linear-gradient(135deg,#00d4ff,#0066ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.hero-sub{font-size:16px;line-height:1.8;color:#6b7e94;max-width:500px;margin-bottom:40px;}
+.hero-sub{font-size:17px;line-height:1.8;color:#6b7e94;max-width:520px;margin-bottom:40px;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
 .btn-p{background:linear-gradient(135deg,#0066ff,#00d4ff);color:#000;padding:14px 32px;font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:transform 0.2s,box-shadow 0.2s;}
 .btn-p:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(0,102,255,0.3);}
@@ -54,144 +52,155 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 section{position:relative;z-index:1;padding:90px 40px;}
 .sec-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2.5px;color:#00d4ff;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
 .sec-label::before{content:'';display:block;width:28px;height:1px;background:#00d4ff;}
-.sec-title{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin-bottom:18px;}
-.sec-desc{font-size:15px;line-height:1.8;color:#6b7e94;max-width:540px;margin-bottom:52px;}
+.sec-title{font-size:clamp(26px,4vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin-bottom:16px;}
+.sec-desc{font-size:15px;line-height:1.8;color:#6b7e94;max-width:580px;margin-bottom:48px;}
 
-/* WHY */
-.why-sec{background:#0d1219;}
-.reasons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-.r-card{background:#151e2a;padding:36px 30px;border:1px solid #1e2d3d;transition:transform 0.3s,border-color 0.3s;cursor:default;position:relative;overflow:hidden;}
-.r-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,#0066ff,#00d4ff);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
-.r-card:hover{transform:translateY(-4px);border-color:rgba(0,212,255,0.2);}
-.r-card:hover::before{transform:scaleX(1);}
-.r-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:#3d5268;letter-spacing:2px;margin-bottom:10px;}
-.r-icon{font-size:22px;color:#00d4ff;margin-bottom:16px;display:block;width:44px;height:44px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.2);display:flex;align-items:center;justify-content:center;}
-.r-title{font-size:18px;font-weight:700;margin-bottom:12px;}
-.r-text{font-size:13px;line-height:1.8;color:#6b7e94;}
-
-/* STATS */
-.stats-sec{background:#080c10;border-top:1px solid #1e2d3d;border-bottom:1px solid #1e2d3d;}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
-.stat-item{padding:56px 32px;border-right:1px solid #1e2d3d;text-align:center;transition:background 0.3s;}
-.stat-item:last-child{border-right:none;}
-.stat-item:hover{background:#151e2a;}
-.stat-num{font-size:clamp(36px,5vw,56px);font-weight:800;letter-spacing:-2px;line-height:1;background:linear-gradient(135deg,#e8edf4,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;}
-.stat-lbl{font-size:13px;color:#6b7e94;line-height:1.5;}
+/* ABOUT */
+.about-sec{background:#0d1219;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.about-text p{font-size:15px;line-height:1.9;color:#6b7e94;margin-bottom:20px;}
+.about-text p:last-child{margin-bottom:0;}
+.about-focus{background:#151e2a;border:1px solid #1e2d3d;padding:32px;}
+.focus-title{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;color:#00d4ff;text-transform:uppercase;margin-bottom:20px;}
+.focus-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.focus-list li{display:flex;align-items:center;gap:12px;font-size:14px;color:#e8edf4;font-weight:600;}
+.focus-list li i{color:#00d4ff;width:16px;text-align:center;font-size:13px;}
 
 /* SERVICES */
-.srv-sec{background:#0d1219;}
+.srv-sec{background:#080c10;}
 .srv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
-.srv-card{background:#151e2a;border:1px solid #1e2d3d;padding:40px 36px;transition:border-color 0.3s;cursor:default;}
+.srv-card{background:#0d1219;border:1px solid #1e2d3d;padding:36px 32px;transition:border-color 0.3s;position:relative;overflow:hidden;}
+.srv-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,#0066ff,#00d4ff);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
 .srv-card:hover{border-color:rgba(0,212,255,0.25);}
-.srv-head{display:flex;align-items:flex-start;gap:18px;margin-bottom:18px;}
-.srv-icon{width:48px;height:48px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:#00d4ff;flex-shrink:0;transition:background 0.3s;}
+.srv-card:hover::before{transform:scaleX(1);}
+.srv-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px;}
+.srv-icon{width:46px;height:46px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.2);display:flex;align-items:center;justify-content:center;font-size:18px;color:#00d4ff;flex-shrink:0;transition:background 0.3s;}
 .srv-card:hover .srv-icon{background:rgba(0,212,255,0.15);border-color:rgba(0,212,255,0.3);}
-.srv-title{font-size:18px;font-weight:700;padding-top:4px;line-height:1.3;}
-.srv-text{font-size:13px;line-height:1.8;color:#6b7e94;}
-.srv-tag{display:inline-block;margin-top:16px;padding:4px 12px;background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.15);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;color:#00d4ff;}
+.srv-title{font-size:17px;font-weight:700;line-height:1.3;padding-top:4px;}
+.srv-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:18px;}
+.srv-list li{display:flex;align-items:center;gap:10px;font-size:13px;color:#6b7e94;}
+.srv-list li i{color:#00d4ff;font-size:11px;width:14px;}
+.srv-tag{display:inline-block;padding:4px 12px;background:rgba(0,212,255,0.06);border:1px solid rgba(0,212,255,0.15);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;color:#00d4ff;}
 
-/* TECH STACK */
-.tech-sec{background:#080c10;}
-.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
-.tech-card{background:#151e2a;border:1px solid #1e2d3d;padding:28px 24px;display:flex;flex-direction:column;align-items:center;gap:12px;transition:border-color 0.3s,transform 0.3s;cursor:default;}
-.tech-card:hover{border-color:rgba(0,212,255,0.25);transform:translateY(-3px);}
-.tech-icon{font-size:28px;color:#00d4ff;width:56px;height:56px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.15);display:flex;align-items:center;justify-content:center;}
-.tech-name{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#e8edf4;text-align:center;}
-.tech-cat{font-size:11px;color:#3d5268;text-align:center;letter-spacing:0.5px;}
+/* TECH */
+.tech-sec{background:#0d1219;}
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.tech-card{background:#151e2a;border:1px solid #1e2d3d;padding:28px 24px;display:flex;align-items:center;gap:16px;transition:border-color 0.3s,transform 0.3s;}
+.tech-card:hover{border-color:rgba(0,212,255,0.25);transform:translateX(4px);}
+.tech-icon{width:44px;height:44px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.15);display:flex;align-items:center;justify-content:center;font-size:18px;color:#00d4ff;flex-shrink:0;}
+.tech-info{}
+.tech-name{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#e8edf4;margin-bottom:3px;}
+.tech-cat{font-size:11px;color:#3d5268;}
+
+/* WHY CHOOSE US */
+.why-sec{background:#080c10;}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.why-card{background:#0d1219;border:1px solid #1e2d3d;padding:36px 30px;transition:border-color 0.3s,transform 0.3s;}
+.why-card:hover{border-color:rgba(0,212,255,0.2);transform:translateY(-4px);}
+.why-icon{width:48px;height:48px;background:rgba(0,102,255,0.1);border:1px solid rgba(0,102,255,0.2);display:flex;align-items:center;justify-content:center;font-size:20px;color:#00d4ff;margin-bottom:20px;}
+.why-title{font-size:17px;font-weight:700;margin-bottom:10px;}
+.why-text{font-size:13px;line-height:1.8;color:#6b7e94;}
+
+/* HOW WE WORK */
+.how-sec{background:#0d1219;}
+.how-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;}
+.how-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,#1e2d3d,#1e2d3d,#1e2d3d,transparent);z-index:0;}
+.how-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;position:relative;z-index:1;}
+.step-num{width:56px;height:56px;border-radius:50%;background:#080c10;border:2px solid #1e2d3d;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:#00d4ff;margin-bottom:20px;transition:border-color 0.3s,background 0.3s;}
+.how-step:hover .step-num{border-color:#00d4ff;background:rgba(0,212,255,0.08);}
+.step-title{font-size:15px;font-weight:700;margin-bottom:8px;}
+.step-text{font-size:12px;line-height:1.7;color:#6b7e94;}
 
 /* CONTACT */
-.cnt-sec{background:#0d1219;}
+.cnt-sec{background:#080c10;}
 .cnt-wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
-.cnt-item{display:flex;align-items:flex-start;gap:18px;margin-bottom:30px;}
-.cnt-icon{width:42px;height:42px;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;color:#00d4ff;flex-shrink:0;margin-top:4px;}
-.cnt-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:#3d5268;text-transform:uppercase;margin-bottom:5px;}
+.cnt-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:28px;}
+.cnt-icon{width:40px;height:40px;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.15);display:flex;align-items:center;justify-content:center;font-size:15px;color:#00d4ff;flex-shrink:0;margin-top:2px;}
+.cnt-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:#3d5268;text-transform:uppercase;margin-bottom:4px;}
 .cnt-val{font-size:15px;color:#e8edf4;font-weight:600;}
 .cnt-val a{color:#00d4ff;text-decoration:none;}
 .cnt-form{display:flex;flex-direction:column;gap:14px;}
 .f-group{display:flex;flex-direction:column;gap:7px;}
 .f-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:#3d5268;text-transform:uppercase;}
-.f-input,.f-textarea{background:#111823;border:1px solid #1e2d3d;color:#e8edf4;padding:13px 16px;font-family:'Manrope',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;width:100%;}
-.f-input:focus,.f-textarea:focus{border-color:#00d4ff;background:rgba(0,212,255,0.03);}
+.f-input,.f-textarea{background:#0d1219;border:1px solid #1e2d3d;color:#e8edf4;padding:13px 16px;font-family:'Manrope',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;width:100%;}
+.f-input:focus,.f-textarea:focus{border-color:#00d4ff;background:rgba(0,212,255,0.02);}
 .f-textarea{height:110px;resize:vertical;}
 .f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.f-submit{background:linear-gradient(135deg,#0066ff,#00d4ff);color:#000;padding:15px;font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;border:none;cursor:pointer;width:100%;transition:opacity 0.2s,transform 0.2s;margin-top:6px;}
+.f-submit{background:linear-gradient(135deg,#0066ff,#00d4ff);color:#000;padding:15px;font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;border:none;cursor:pointer;width:100%;transition:opacity 0.2s,transform 0.2s;margin-top:4px;}
 .f-submit:hover{opacity:0.9;transform:translateY(-2px);}
 
 /* FOOTER */
-footer{background:#080c10;border-top:1px solid #1e2d3d;padding:36px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;position:relative;z-index:1;}
-.f-logo{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:18px;color:#e8edf4;}
+footer{background:#0d1219;border-top:1px solid #1e2d3d;padding:40px 40px 28px;position:relative;z-index:1;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;margin-bottom:32px;}
+.f-logo{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:18px;color:#e8edf4;margin-bottom:10px;}
 .f-logo span{color:#00d4ff;}
-.f-copy{font-family:'JetBrains Mono',monospace;font-size:11px;color:#3d5268;letter-spacing:1px;}
-.f-links{display:flex;gap:20px;flex-wrap:wrap;}
-.f-links a{font-size:12px;color:#6b7e94;text-decoration:none;transition:color 0.2s;font-weight:600;}
-.f-links a:hover{color:#00d4ff;}
+.f-tagline{font-size:12px;color:#3d5268;max-width:220px;line-height:1.6;}
+.f-nav-col h4{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:#3d5268;text-transform:uppercase;margin-bottom:14px;}
+.f-nav-col a{display:block;font-size:13px;color:#6b7e94;text-decoration:none;margin-bottom:8px;transition:color 0.2s;font-weight:600;}
+.f-nav-col a:hover{color:#00d4ff;}
+.footer-bottom{border-top:1px solid #1e2d3d;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:11px;color:#3d5268;}
 
 /* FLOATING */
 .float-social{position:fixed;right:20px;bottom:24px;z-index:999;display:flex;flex-direction:column;gap:10px;}
 .float-btn{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.25s;box-shadow:0 4px 20px rgba(0,0,0,0.5);}
-.float-btn:hover{transform:scale(1.12) translateY(-3px);}
 .float-btn i{font-size:20px;color:#fff;}
+.float-btn:hover{transform:scale(1.1) translateY(-3px);}
 .fb-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
-.fb-wa{background:#25d366;animation:pulse-wa 2s infinite;}
-@keyframes pulse-wa{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5);}
-  70%{box-shadow:0 0 0 14px rgba(37,211,102,0);}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
-}
+.fb-wa{background:#25d366;animation:pulse-wa 2.5s infinite;}
+@keyframes pulse-wa{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5);}70%{box-shadow:0 0 0 14px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
 
 /* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.55s ease,transform 0.55s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
 /* LANG */
-.az-content{display:block;}
-.en-content{display:none;}
-body.lang-en .az-content{display:none;}
-body.lang-en .en-content{display:block;}
-.az-flex{display:flex;}
-.en-flex{display:none;}
-body.lang-en .az-flex{display:none;}
-body.lang-en .en-flex{display:flex;}
+.az-c{display:block;}.en-c{display:none;}
+body.lang-en .az-c{display:none !important;}body.lang-en .en-c{display:block;}
+a.az-c{display:block;} a.en-c{display:none;}
+body.lang-en a.az-c{display:none !important;}body.lang-en a.en-c{display:block;}
+span.az-c{display:inline;}span.en-c{display:none;}
+body.lang-en span.az-c{display:none !important;}body.lang-en span.en-c{display:inline;}
+.az-f{display:flex;}.en-f{display:none;}
+body.lang-en .az-f{display:none !important;}body.lang-en .en-f{display:flex;}
 .hero-en{display:none;}
 body.lang-en .hero-en{display:block;}
 body.lang-en .hero-az{display:none;}
 
 .divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,#1e2d3d,transparent);}
 
-/* RESPONSIVE */
 @media(max-width:960px){
-  .reasons-grid{grid-template-columns:repeat(2,1fr);}
-  .stats-grid{grid-template-columns:repeat(2,1fr);}
-  .stat-item:nth-child(2){border-right:none;}
-  .stat-item:nth-child(3){border-top:1px solid #1e2d3d;}
-  .cnt-wrap{grid-template-columns:1fr;gap:48px;}
   .nav-links{display:none;}
+  .about-grid,.cnt-wrap{grid-template-columns:1fr;gap:40px;}
+  .srv-grid,.why-grid{grid-template-columns:1fr;}
   .tech-grid{grid-template-columns:repeat(2,1fr);}
+  .how-steps{grid-template-columns:1fr;gap:24px;}
+  .how-steps::before{display:none;}
+  .footer-top{flex-direction:column;gap:28px;}
 }
 @media(max-width:640px){
   nav{padding:14px 20px;}
   section{padding:60px 20px;}
   .hero{padding:100px 20px 60px;}
-  footer{padding:28px 20px;flex-direction:column;text-align:center;}
-  .reasons-grid,.srv-grid{grid-template-columns:1fr;}
-  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  footer{padding:32px 20px 20px;}
   .f-row{grid-template-columns:1fr;}
+  .tech-grid{grid-template-columns:1fr;}
   .nav-social a span{display:none;}
   .nav-social a{padding:6px 10px;}
-  .tech-grid{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="logo">HYBRIDLAB.<span>COM.AZ</span></div>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="#why"><span class="az-content">Niyə İT?</span><span class="en-content">Why IT?</span></a></li>
-      <li><a href="#services"><span class="az-content">Xidmətlər</span><span class="en-content">Services</span></a></li>
-      <li><a href="#tech"><span class="az-content">Texnologiyalar</span><span class="en-content">Technologies</span></a></li>
-      <li><a href="#contact"><span class="az-content">Əlaqə</span><span class="en-content">Contact</span></a></li>
+      <li><a href="#about"><span class="az-c">Haqqımızda</span><span class="en-c">About</span></a></li>
+      <li><a href="#services"><span class="az-c">Xidmətlər</span><span class="en-c">Services</span></a></li>
+      <li><a href="#tech"><span class="az-c">Texnologiyalar</span><span class="en-c">Technologies</span></a></li>
+      <li><a href="#contact"><span class="az-c">Əlaqə</span><span class="en-c">Contact</span></a></li>
     </ul>
     <div class="lang-wrap">
       <button class="lang-btn active" onclick="setLang('az')">AZ</button>
@@ -199,12 +208,10 @@ body.lang-en .hero-az{display:none;}
     </div>
     <div class="nav-social">
       <a href="https://instagram.com/hybridlab.com.az" target="_blank" class="ig">
-        <i class="fa-brands fa-instagram"></i>
-        <span>Instagram</span>
+        <i class="fa-brands fa-instagram"></i><span>Instagram</span>
       </a>
-      <a href="https://wa.me/994554502258" target="_blank" class="wa">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>WhatsApp</span>
+      <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir" target="_blank" class="wa">
+        <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
       </a>
     </div>
   </div>
@@ -215,18 +222,18 @@ body.lang-en .hero-az{display:none;}
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="hero-content">
-    <div class="hero-badge az-content"><div class="badge-dot"></div>İT İNFRASTRUKTUR SİSTEMLƏRİ</div>
-    <div class="hero-badge en-content"><div class="badge-dot"></div>IT INFRASTRUCTURE SYSTEMS</div>
-    <h1 class="hero-title hero-az">Rəqəmsal<br><span class="outline">Gələcəyinizi</span><br><span class="grad">Qoruyuruq</span></h1>
-    <h1 class="hero-title hero-en">Protecting<br><span class="outline">Your Digital</span><br><span class="grad">Future</span></h1>
-    <p class="hero-sub az-content">Müasir biznes rəqəmsal texnologiyasız inkişaf edə bilməz. İT sistemlər şirkətinizin sinir sistemidir — onları güclü, təhlükəsiz və effektiv saxlayırıq.</p>
-    <p class="hero-sub en-content">Modern business cannot grow without digital technology. IT systems are your company's nervous system — we keep them powerful, secure, and efficient.</p>
-    <div class="hero-btns az-flex">
-      <a href="#why" class="btn-p">Niyə lazımdır?</a>
+    <div class="hero-badge az-c"><div class="badge-dot"></div>İT İNFRASTRUKTUR & TEXNIKI DƏSTƏK</div>
+    <div class="hero-badge en-c"><div class="badge-dot"></div>IT INFRASTRUCTURE & TECHNICAL SUPPORT</div>
+    <h1 class="hero-title hero-az">Professional İT<br>infrastruktur xidmətləri<br><span class="grad">biznesiniz üçün</span></h1>
+    <h1 class="hero-title hero-en">Professional IT<br>infrastructure and<br><span class="grad">support services</span></h1>
+    <p class="hero-sub az-c">Server idarəetməsi, şəbəkə qurulması, virtualizasiya və fasiləsiz texniki dəstək — biznesinizin IT sistemlərini stabil saxlayırıq.</p>
+    <p class="hero-sub en-c">Server administration, network setup, virtualization and continuous technical support — we keep your business IT systems stable and secure.</p>
+    <div class="hero-btns az-f">
+      <a href="#services" class="btn-p">Xidmətlərə bax</a>
       <a href="#contact" class="btn-s">Bizimlə əlaqə</a>
     </div>
-    <div class="hero-btns en-flex">
-      <a href="#why" class="btn-p">Why IT Matters</a>
+    <div class="hero-btns en-f">
+      <a href="#services" class="btn-p">View Services</a>
       <a href="#contact" class="btn-s">Contact Us</a>
     </div>
   </div>
@@ -234,291 +241,417 @@ body.lang-en .hero-az{display:none;}
 
 <div class="divider"></div>
 
-<!-- WHY IT -->
-<section class="why-sec" id="why">
-  <div class="sec-label az-content reveal">Əsas səbəblər</div>
-  <div class="sec-label en-content reveal">Core Reasons</div>
-  <h2 class="sec-title az-content reveal">Niyə İT sistemi vacibdir?</h2>
-  <h2 class="sec-title en-content reveal">Why does IT infrastructure matter?</h2>
-  <p class="sec-desc az-content reveal">Hər müasir şirkətin arxasında güclü bir İT infrastrukturu dayanır. Bu, sadə texnologiya deyil — rəqabət üstünlüyünüzdür.</p>
-  <p class="sec-desc en-content reveal">Behind every modern company stands a powerful IT infrastructure. This is not just technology — it is your competitive advantage.</p>
-  <div class="reasons-grid">
-    <div class="r-card reveal">
-      <div class="r-num">01</div>
-      <div class="r-icon"><i class="fa-solid fa-bolt"></i></div>
-      <div class="r-title az-content">İş Sürəti və Effektivliyi</div>
-      <div class="r-title en-content">Speed and Efficiency</div>
-      <div class="r-text az-content">Düzgün qurulmuş İT sistemi işçilərin vaxtını azaldır, prosesləri avtomatlaşdırır və şirkətin məhsuldarlığını onlarla faiz artırır.</div>
-      <div class="r-text en-content">A properly built IT system reduces employee time, automates processes, and increases company productivity by tens of percent.</div>
+<!-- ABOUT -->
+<section class="about-sec" id="about">
+  <div class="sec-label az-c reveal">Haqqımızda</div>
+  <div class="sec-label en-c reveal">About Us</div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <h2 class="sec-title az-c">HybridLab haqqında</h2>
+      <h2 class="sec-title en-c">About HybridLab</h2>
+      <p class="az-c">HybridLab şirkətlər üçün IT infrastrukturu, server idarəetməsi və texniki dəstək xidmətləri təqdim edir. Məqsədimiz bizneslərin IT sistemlərini stabil və təhlükəsiz saxlamaqdır.</p>
+      <p class="en-c">HybridLab provides IT infrastructure, server administration and technical support services for companies. Our goal is to keep business IT systems stable and secure.</p>
+      <p class="az-c" style="margin-top:16px;">Kiçik və orta bizneslərə yönəlmiş xidmətlərimiz ilə IT infrastrukturunuzu sıfırdan qurur, mövcud sistemləri optimallaşdırır və davamlı texniki dəstək göstəririk.</p>
+      <p class="en-c" style="margin-top:16px;">Focused on small and medium businesses, we build IT infrastructure from scratch, optimize existing systems, and provide ongoing technical support.</p>
     </div>
-    <div class="r-card reveal">
-      <div class="r-num">02</div>
-      <div class="r-icon"><i class="fa-solid fa-shield-halved"></i></div>
-      <div class="r-title az-content">Məlumat Təhlükəsizliyi</div>
-      <div class="r-title en-content">Data Security</div>
-      <div class="r-text az-content">Şirkətin ən dəyərli aktivlərindən biri məlumatlarıdır. Kiberhücumlar, məlumat sızmaları hər gün minlərlə şirkəti zərərə uğradır. İT sistemi bu risklərə qarşı ilk müdafiə xəttidir.</div>
-      <div class="r-text en-content">One of a company's most valuable assets is its data. Cyberattacks and data breaches cause losses to thousands of companies daily. IT systems are the first line of defense.</div>
-    </div>
-    <div class="r-card reveal">
-      <div class="r-num">03</div>
-      <div class="r-icon"><i class="fa-solid fa-chart-line"></i></div>
-      <div class="r-title az-content">Miqyaslanabilirlik</div>
-      <div class="r-title en-content">Scalability</div>
-      <div class="r-text az-content">Biznesiniz böyüdükcə İT infrastrukturunuz da böyüyə bilməlidir. Düzgün planlanmış sistem yeni işçilər və artan yük zamanı problemsiz genişlənir.</div>
-      <div class="r-text en-content">As your business grows, your IT infrastructure must grow with it. A properly planned system expands seamlessly with new employees and increased load.</div>
-    </div>
-    <div class="r-card reveal">
-      <div class="r-num">04</div>
-      <div class="r-icon"><i class="fa-solid fa-globe"></i></div>
-      <div class="r-title az-content">Uzaqdan İş İmkanı</div>
-      <div class="r-title en-content">Remote Work Capability</div>
-      <div class="r-text az-content">Müasir dünyada işçilər ofisdən, evdən, yaxud hər yerdən işləyə bilməlidir. VPN, bulud həlləri və təhlükəsiz uzaqdan giriş sistemləri bu çevikliyi təmin edir.</div>
-      <div class="r-text en-content">In the modern world, employees must be able to work from the office, home, or anywhere. VPN, cloud solutions, and secure remote access systems ensure this flexibility.</div>
-    </div>
-    <div class="r-card reveal">
-      <div class="r-num">05</div>
-      <div class="r-icon"><i class="fa-solid fa-hard-drive"></i></div>
-      <div class="r-title az-content">Fasiləsiz İş Rejimi</div>
-      <div class="r-title en-content">Business Continuity</div>
-      <div class="r-text az-content">Server çökməsi, elektrik kəsilməsi, fəlakət halları istənilən vaxt baş verə bilər. Güclü İT sistemi ehtiyat nüsxə və yüksək əlçatanlıq təmin edərək fasiləsiz iş rejimini qoruyur.</div>
-      <div class="r-text en-content">Server crashes, power outages, disaster scenarios can happen anytime. A robust IT system ensures business continuity with backups and high availability solutions.</div>
-    </div>
-    <div class="r-card reveal">
-      <div class="r-num">06</div>
-      <div class="r-icon"><i class="fa-solid fa-handshake"></i></div>
-      <div class="r-title az-content">Müştəri Məmnuniyyəti</div>
-      <div class="r-title en-content">Customer Satisfaction</div>
-      <div class="r-text az-content">Yavaş yüklənən sayt, əlçatmaz xidmət, texniki nasazlıqlar — müştəriləri rəqibə göndərənin ən sürətli yoludur. Güclü İT infrastrukturu etibarlılıq yaradır.</div>
-      <div class="r-text en-content">Slow websites, inaccessible services, and technical failures send customers to competitors. A strong IT infrastructure creates trust and a professional image.</div>
+    <div class="about-focus reveal">
+      <div class="focus-title az-c">Fokus sahələrimiz</div>
+      <div class="focus-title en-c">Our focus areas</div>
+      <ul class="focus-list">
+        <li><i class="fa-solid fa-chevron-right"></i><span class="az-c">Kiçik biznes IT</span><span class="en-c">Small business IT</span></li>
+        <li><i class="fa-solid fa-chevron-right"></i><span class="az-c">İnfrastruktur qurulması</span><span class="en-c">Infrastructure setup</span></li>
+        <li><i class="fa-solid fa-chevron-right"></i><span class="az-c">IT autsorsinq</span><span class="en-c">IT outsourcing</span></li>
+        <li><i class="fa-solid fa-chevron-right"></i><span class="az-c">Dəstək xidmətləri</span><span class="en-c">Support services</span></li>
+        <li><i class="fa-solid fa-chevron-right"></i><span class="az-c">Video müşahidə & giriş nəzarəti</span><span class="en-c">Video surveillance & access control</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<section class="stats-sec" id="stats">
-  <div class="stats-grid">
-    <div class="stat-item reveal">
-      <div class="stat-num">43%</div>
-      <div class="stat-lbl az-content">Kiberhücumların kiçik<br>bizneslərə yönəlməsi</div>
-      <div class="stat-lbl en-content">Cyberattacks targeting<br>small businesses</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">$4.5M</div>
-      <div class="stat-lbl az-content">Ortalama məlumat sızmasının<br>xərci (2024)</div>
-      <div class="stat-lbl en-content">Average data breach<br>cost (2024)</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">30%</div>
-      <div class="stat-lbl az-content">İT avtomatlaşma ilə<br>məhsuldarlıq artımı</div>
-      <div class="stat-lbl en-content">Productivity increase with<br>IT automation</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">99.9%</div>
-      <div class="stat-lbl az-content">Hədəf sistem<br>əlçatanlığı</div>
-      <div class="stat-lbl en-content">Target system<br>uptime availability</div>
-    </div>
-  </div>
-</section>
+<div class="divider"></div>
 
 <!-- SERVICES -->
 <section class="srv-sec" id="services">
-  <div class="sec-label az-content reveal">Xidmətlərimiz</div>
-  <div class="sec-label en-content reveal">Our Services</div>
-  <h2 class="sec-title az-content reveal">Şirkətiniz üçün həllər</h2>
-  <h2 class="sec-title en-content reveal">Solutions for your business</h2>
-  <p class="sec-desc az-content reveal">Müasir İT tələbatlarınızı tam şəkildə qarşılayan kompleks xidmətlər paketi.</p>
-  <p class="sec-desc en-content reveal">A comprehensive package of services that fully meets your modern IT requirements.</p>
+  <div class="sec-label az-c reveal">Xidmətlərimiz</div>
+  <div class="sec-label en-c reveal">Our Services</div>
+  <h2 class="sec-title az-c reveal">Şirkətiniz üçün həllər</h2>
+  <h2 class="sec-title en-c reveal">Solutions for your business</h2>
+  <p class="sec-desc az-c reveal">Server qurulmasından tutmuş davamlı dəstəyə qədər — bütün IT ehtiyaclarınızı əhatə edirik.</p>
+  <p class="sec-desc en-c reveal">From server setup to ongoing support — we cover all your IT needs.</p>
   <div class="srv-grid">
-    <div class="srv-card reveal">
-      <div class="srv-head">
-        <div class="srv-icon"><i class="fa-solid fa-camera-cctv"></i></div>
-        <div>
-          <div class="srv-title az-content">İntellektual Video Müşahidə və Girişə Nəzarət Sistemləri</div>
-          <div class="srv-title en-content">Intelligent Video Surveillance & Access Control</div>
-        </div>
-      </div>
-      <div class="srv-text az-content">Şirkətin daxili və xarici təhlükəsizliyini təmin etmək məqsədilə IP əsaslı video müşahidə (VMS), biometrik və kartlı giriş sistemlərinin sıfırdan qurulması, şəbəkəyə inteqrasiyası və mərkəzi idarəetmə panelinin tənzimlənməsi.</div>
-      <div class="srv-text en-content">From-scratch installation of IP-based video surveillance (VMS), biometric and card-based access control systems, network integration, and central management panel configuration to ensure internal and external company security.</div>
-      <span class="srv-tag">CCTV & ACS</span>
-    </div>
-    <div class="srv-card reveal">
-      <div class="srv-head">
-        <div class="srv-icon"><i class="fa-solid fa-cloud"></i></div>
-        <div>
-          <div class="srv-title az-content">Bulud Xidmətləri</div>
-          <div class="srv-title en-content">Cloud Services</div>
-        </div>
-      </div>
-      <div class="srv-text az-content">AWS, Azure, Google Cloud mühitlərinin qurulması, miqrasiyası və idarəsi. Hibrid bulud həlləri ilə çeviklik qazanın, xərclərə nəzarət edin.</div>
-      <div class="srv-text en-content">Setup, migration, and management of AWS, Azure, and Google Cloud environments. Gain flexibility with hybrid cloud solutions.</div>
-      <span class="srv-tag">CLOUD</span>
-    </div>
+
     <div class="srv-card reveal">
       <div class="srv-head">
         <div class="srv-icon"><i class="fa-solid fa-server"></i></div>
         <div>
-          <div class="srv-title az-content">Server və Şəbəkə İdarəsi</div>
-          <div class="srv-title en-content">Server and Network Management</div>
+          <div class="srv-title az-c">Server və IT İnfrastrukturu</div>
+          <div class="srv-title en-c">Server & IT Infrastructure</div>
         </div>
       </div>
-      <div class="srv-text az-content">Fiziki və virtual server qurulması, Active Directory idarəsi, şəbəkə dizaynı (LAN/WAN/VPN), 7/24 monitorinq və sürətli müdaxilə xidmətləri.</div>
-      <div class="srv-text en-content">Physical and virtual server setup, Active Directory management, network design (LAN/WAN/VPN), 24/7 monitoring and rapid response services.</div>
+      <ul class="srv-list az-c">
+        <li><i class="fa-solid fa-circle-dot"></i>Windows Server qurulması və idarəsi</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Active Directory & Group Policy</li>
+        <li><i class="fa-solid fa-circle-dot"></i>DNS, DHCP konfiqurasiyası</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Şəbəkə dizaynı (LAN/WAN/VPN)</li>
+      </ul>
+      <ul class="srv-list en-c">
+        <li><i class="fa-solid fa-circle-dot"></i>Windows Server setup & management</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Active Directory & Group Policy</li>
+        <li><i class="fa-solid fa-circle-dot"></i>DNS, DHCP configuration</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Network design (LAN/WAN/VPN)</li>
+      </ul>
       <span class="srv-tag">INFRASTRUCTURE</span>
     </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-head">
+        <div class="srv-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <div>
+          <div class="srv-title az-c">Virtualizasiya</div>
+          <div class="srv-title en-c">Virtualization</div>
+        </div>
+      </div>
+      <ul class="srv-list az-c">
+        <li><i class="fa-solid fa-circle-dot"></i>VMware vSphere / ESXi qurulması</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Hyper-V mühiti</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Virtual maşın idarəetməsi</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Resurs optimallaşdırması</li>
+      </ul>
+      <ul class="srv-list en-c">
+        <li><i class="fa-solid fa-circle-dot"></i>VMware vSphere / ESXi setup</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Hyper-V environment</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Virtual machine management</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Resource optimization</li>
+      </ul>
+      <span class="srv-tag">VIRTUALIZATION</span>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-head">
+        <div class="srv-icon"><i class="fa-solid fa-database"></i></div>
+        <div>
+          <div class="srv-title az-c">Backup İdarəetməsi</div>
+          <div class="srv-title en-c">Backup Management</div>
+        </div>
+      </div>
+      <ul class="srv-list az-c">
+        <li><i class="fa-solid fa-circle-dot"></i>Veeam Backup qurulması</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Backup monitorinqi</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Bərpa testləri (Restore testing)</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Fəlakətdən bərpa planı (DR)</li>
+      </ul>
+      <ul class="srv-list en-c">
+        <li><i class="fa-solid fa-circle-dot"></i>Veeam Backup setup</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Backup monitoring</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Restore testing</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Disaster recovery planning (DR)</li>
+      </ul>
+      <span class="srv-tag">BACKUP</span>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-head">
+        <div class="srv-icon"><i class="fa-solid fa-video"></i></div>
+        <div>
+          <div class="srv-title az-c">Video Müşahidə və Girişə Nəzarət</div>
+          <div class="srv-title en-c">Video Surveillance & Access Control</div>
+        </div>
+      </div>
+      <ul class="srv-list az-c">
+        <li><i class="fa-solid fa-circle-dot"></i>IP kamera sistemlərinin qurulması</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Biometrik və kartlı giriş sistemləri</li>
+        <li><i class="fa-solid fa-circle-dot"></i>VMS mərkəzi idarəetmə paneli</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Şəbəkəyə inteqrasiya</li>
+      </ul>
+      <ul class="srv-list en-c">
+        <li><i class="fa-solid fa-circle-dot"></i>IP camera system installation</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Biometric and card-based access systems</li>
+        <li><i class="fa-solid fa-circle-dot"></i>VMS central management panel</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Network integration</li>
+      </ul>
+      <span class="srv-tag">CCTV & ACS</span>
+    </div>
+
+    <div class="srv-card reveal">
+      <div class="srv-head">
+        <div class="srv-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div>
+          <div class="srv-title az-c">Sistem Monitorinqi</div>
+          <div class="srv-title en-c">System Monitoring</div>
+        </div>
+      </div>
+      <ul class="srv-list az-c">
+        <li><i class="fa-solid fa-circle-dot"></i>Zabbix monitorinq qurulması</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Server & şəbəkə izlənməsi</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Xəbərdarlıq sistemi (alerting)</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Performans hesabatları</li>
+      </ul>
+      <ul class="srv-list en-c">
+        <li><i class="fa-solid fa-circle-dot"></i>Zabbix monitoring setup</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Server & network monitoring</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Alerting configuration</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Performance reports</li>
+      </ul>
+      <span class="srv-tag">MONITORING</span>
+    </div>
+
     <div class="srv-card reveal">
       <div class="srv-head">
         <div class="srv-icon"><i class="fa-solid fa-headset"></i></div>
         <div>
-          <div class="srv-title az-content">Sistem İnzibatçılığı və IT Dəstək</div>
-          <div class="srv-title en-content">System Administration & IT Support</div>
+          <div class="srv-title az-c">Texniki Dəstək</div>
+          <div class="srv-title en-c">Technical Support</div>
         </div>
       </div>
-      <div class="srv-text az-content">İşçilərin texniki problemlərinin uzaqdan və ya yerli həlli, avadanlıq/proqram idarəsi, yeni işçilərin sisteme qoşulması və fasiləsiz dəstək xidməti.</div>
-      <div class="srv-text en-content">Remote and on-site resolution of technical issues, hardware/software management, employee onboarding, and continuous support services.</div>
+      <ul class="srv-list az-c">
+        <li><i class="fa-solid fa-circle-dot"></i>Uzaqdan texniki dəstək</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Yerli (onsite) müdaxilə</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Troubleshooting & problem həlli</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Sistem inzibatçılığı</li>
+      </ul>
+      <ul class="srv-list en-c">
+        <li><i class="fa-solid fa-circle-dot"></i>Remote technical support</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Onsite support</li>
+        <li><i class="fa-solid fa-circle-dot"></i>Troubleshooting & problem solving</li>
+        <li><i class="fa-solid fa-circle-dot"></i>System administration</li>
+      </ul>
       <span class="srv-tag">SUPPORT</span>
     </div>
+
   </div>
 </section>
 
-<!-- TECH STACK -->
+<div class="divider"></div>
+
+<!-- TECHNOLOGIES -->
 <section class="tech-sec" id="tech">
-  <div class="sec-label az-content reveal">İstifadə etdiyimiz texnologiyalar</div>
-  <div class="sec-label en-content reveal">Technologies we use</div>
-  <h2 class="sec-title az-content reveal">Tərəfdaş Həllər</h2>
-  <h2 class="sec-title en-content reveal">Partner Solutions</h2>
-  <p class="sec-desc az-content reveal">Dünya standartlarına uyğun alətlər və platformalarla işləyirik.</p>
-  <p class="sec-desc en-content reveal">We work with world-class tools and platforms.</p>
+  <div class="sec-label az-c reveal">Texnologiyalar</div>
+  <div class="sec-label en-c reveal">Technologies</div>
+  <h2 class="sec-title az-c reveal">İstifadə etdiyimiz texnologiyalar</h2>
+  <h2 class="sec-title en-c reveal">Technologies we use</h2>
+  <p class="sec-desc az-c reveal">Dünya standartlarına uyğun alətlər və platformalarla işləyirik.</p>
+  <p class="sec-desc en-c reveal">We work with industry-standard tools and platforms.</p>
   <div class="tech-grid">
     <div class="tech-card reveal">
       <div class="tech-icon"><i class="fa-solid fa-layer-group"></i></div>
-      <div class="tech-name">VMware vCenter</div>
-      <div class="tech-cat">Virtualizasiya</div>
-    </div>
-    <div class="tech-card reveal">
-      <div class="tech-icon"><i class="fa-solid fa-microchip"></i></div>
-      <div class="tech-name">VMware ESXi</div>
-      <div class="tech-cat">Hypervisor</div>
-    </div>
-    <div class="tech-card reveal">
-      <div class="tech-icon"><i class="fa-solid fa-chart-bar"></i></div>
-      <div class="tech-name">Zabbix</div>
-      <div class="tech-cat">Monitorinq</div>
-    </div>
-    <div class="tech-card reveal">
-      <div class="tech-icon"><i class="fa-solid fa-database"></i></div>
-      <div class="tech-name">Veeam</div>
-      <div class="tech-cat">Backup & Recovery</div>
+      <div class="tech-info"><div class="tech-name">VMware vCenter / ESXi</div><div class="tech-cat">Virtualizasiya</div></div>
     </div>
     <div class="tech-card reveal">
       <div class="tech-icon"><i class="fa-brands fa-microsoft"></i></div>
-      <div class="tech-name">Active Directory</div>
-      <div class="tech-cat">İdentifikasiya</div>
+      <div class="tech-info"><div class="tech-name">Windows Server / AD</div><div class="tech-cat">Microsoft</div></div>
+    </div>
+    <div class="tech-card reveal">
+      <div class="tech-icon"><i class="fa-solid fa-database"></i></div>
+      <div class="tech-info"><div class="tech-name">Veeam Backup</div><div class="tech-cat">Backup & Recovery</div></div>
+    </div>
+    <div class="tech-card reveal">
+      <div class="tech-icon"><i class="fa-solid fa-chart-bar"></i></div>
+      <div class="tech-info"><div class="tech-name">Zabbix</div><div class="tech-cat">Monitorinq</div></div>
     </div>
     <div class="tech-card reveal">
       <div class="tech-icon"><i class="fa-solid fa-network-wired"></i></div>
-      <div class="tech-name">Cisco / MikroTik</div>
-      <div class="tech-cat">Şəbəkə</div>
-    </div>
-    <div class="tech-card reveal">
-      <div class="tech-icon"><i class="fa-solid fa-video"></i></div>
-      <div class="tech-name">Hikvision / Dahua</div>
-      <div class="tech-cat">Video Müşahidə</div>
+      <div class="tech-info"><div class="tech-name">Cisco / MikroTik</div><div class="tech-cat">Şəbəkə</div></div>
     </div>
     <div class="tech-card reveal">
       <div class="tech-icon"><i class="fa-brands fa-linux"></i></div>
-      <div class="tech-name">Linux / Windows Server</div>
-      <div class="tech-cat">Əməliyyat Sistemi</div>
+      <div class="tech-info"><div class="tech-name">Linux</div><div class="tech-cat">Əməliyyat Sistemi</div></div>
+    </div>
+    <div class="tech-card reveal">
+      <div class="tech-icon"><i class="fa-solid fa-video"></i></div>
+      <div class="tech-info"><div class="tech-name">Hikvision / Dahua</div><div class="tech-cat">Video Müşahidə</div></div>
+    </div>
+    <div class="tech-card reveal">
+      <div class="tech-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="tech-info"><div class="tech-name">Hyper-V</div><div class="tech-cat">Microsoft Virtualizasiya</div></div>
+    </div>
+    <div class="tech-card reveal">
+      <div class="tech-icon"><i class="fa-solid fa-fingerprint"></i></div>
+      <div class="tech-info"><div class="tech-name">ZKTeco / Suprema</div><div class="tech-cat">Giriş Nəzarəti</div></div>
     </div>
   </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- WHY CHOOSE US -->
+<section class="why-sec" id="why">
+  <div class="sec-label az-c reveal">Niyə bizi seçin</div>
+  <div class="sec-label en-c reveal">Why choose us</div>
+  <h2 class="sec-title az-c reveal">Niyə HybridLab?</h2>
+  <h2 class="sec-title en-c reveal">Why choose HybridLab?</h2>
+  <p class="sec-desc az-c reveal">Portfolio olmayan bir şirkətin ən böyük üstünlüyü — fərdi yanaşma və sürətli reaksiya.</p>
+  <p class="sec-desc en-c reveal">Our biggest advantage — personalized approach and fast response time.</p>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fa-solid fa-user-tie"></i></div>
+      <div class="why-title az-c">Professional IT yanaşma</div>
+      <div class="why-title en-c">Professional IT approach</div>
+      <div class="why-text az-c">Hər problemə sənaye standartlarına uyğun, düşünülmüş həll yolu ilə yanaşırıq.</div>
+      <div class="why-text en-c">We approach every problem with industry-standard, well-thought-out solutions.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+      <div class="why-title az-c">Sürətli reaksiya vaxtı</div>
+      <div class="why-title en-c">Fast response time</div>
+      <div class="why-text az-c">Texniki problemlər gözləmir. Biz də gözlətmirik — sürətlə müdaxilə edirik.</div>
+      <div class="why-text en-c">Technical problems don't wait. Neither do we — fast intervention when you need it.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+      <div class="why-title az-c">Etibarlı dəstək</div>
+      <div class="why-title en-c">Reliable support</div>
+      <div class="why-text az-c">Bir dəfəlik deyil, uzunmüddətli tərəfdaşlıq — sistemlərinizi daim izləyirik.</div>
+      <div class="why-text en-c">Not a one-time fix, but long-term partnership — we continuously monitor your systems.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fa-solid fa-lock"></i></div>
+      <div class="why-title az-c">Təhlükəsiz həllər</div>
+      <div class="why-title en-c">Secure solutions</div>
+      <div class="why-text az-c">Hər qurulan sistemdə təhlükəsizlik birinci prioritetdir — məlumatlarınız qorunur.</div>
+      <div class="why-text en-c">Security is the first priority in every system we build — your data is protected.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fa-solid fa-sliders"></i></div>
+      <div class="why-title az-c">Çevik xidmət modeli</div>
+      <div class="why-title en-c">Flexible service model</div>
+      <div class="why-text az-c">Bir dəfəlik layihə, aylıq xidmət və ya tam IT autsorsinq — sizin ehtiyacınıza uyğun.</div>
+      <div class="why-text en-c">One-time project, monthly service, or full IT outsourcing — tailored to your needs.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+      <div class="why-title az-c">Şəffaf proses</div>
+      <div class="why-title en-c">Transparent process</div>
+      <div class="why-text az-c">Nə ediləcəyini, niyə ediləcəyini və nə qədər çəkəcəyini əvvəlcədən bildiririk.</div>
+      <div class="why-text en-c">We tell you what will be done, why, and how long it will take — before we start.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW WE WORK -->
+<section class="how-sec" id="how">
+  <div class="sec-label az-c reveal">İş modelimiz</div>
+  <div class="sec-label en-c reveal">How we work</div>
+  <h2 class="sec-title az-c reveal">Biz necə işləyirik</h2>
+  <h2 class="sec-title en-c reveal">Our work process</h2>
+  <p class="sec-desc az-c reveal" style="margin-bottom:56px;">Sadə və şəffaf iş prosesi — ilk zəngdən son dəstəyə qədər.</p>
+  <p class="sec-desc en-c reveal" style="margin-bottom:56px;">Simple and transparent work process — from first call to ongoing support.</p>
+  <div class="how-steps">
+    <div class="how-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title az-c">IT Konsultasiya</div>
+      <div class="step-title en-c">IT Consultation</div>
+      <div class="step-text az-c">Ehtiyaclarınızı dinləyir, mövcud sistemləri qiymətləndiririk.</div>
+      <div class="step-text en-c">We listen to your needs and evaluate your existing systems.</div>
+    </div>
+    <div class="how-step reveal">
+      <div class="step-num">02</div>
+      <div class="step-title az-c">Sistem Analiz</div>
+      <div class="step-title en-c">System Analysis</div>
+      <div class="step-text az-c">İnfrastrukturu təhlil edib zəif nöqtələri müəyyən edirik.</div>
+      <div class="step-text en-c">We analyze the infrastructure and identify weak points.</div>
+    </div>
+    <div class="how-step reveal">
+      <div class="step-num">03</div>
+      <div class="step-title az-c">Həll Təklifi</div>
+      <div class="step-title en-c">Solution Proposal</div>
+      <div class="step-text az-c">Büdcəyə uyğun, konkret həll planı təqdim edirik.</div>
+      <div class="step-text en-c">We present a concrete solution plan that fits your budget.</div>
+    </div>
+    <div class="how-step reveal">
+      <div class="step-num">04</div>
+      <div class="step-title az-c">Quraşdırma</div>
+      <div class="step-title en-c">Implementation</div>
+      <div class="step-text az-c">Sistemi qurir, konfiqurasiya edir və test edirik.</div>
+      <div class="step-text en-c">We install, configure and test the system.</div>
+    </div>
+    <div class="how-step reveal">
+      <div class="step-num">05</div>
+      <div class="step-title az-c">Davamlı Dəstək</div>
+      <div class="step-title en-c">Ongoing Support</div>
+      <div class="step-text az-c">İşdən sonra da yanınızdayıq — monitorinq və dəstək.</div>
+      <div class="step-text en-c">We stay with you after deployment — monitoring and support.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- CONTACT -->
 <section class="cnt-sec" id="contact">
-  <div class="sec-label az-content reveal">Bizimlə əlaqə</div>
-  <div class="sec-label en-content reveal">Get in touch</div>
+  <div class="sec-label az-c reveal">Bizimlə əlaqə</div>
+  <div class="sec-label en-c reveal">Get in touch</div>
   <div class="cnt-wrap">
     <div>
-      <h2 class="sec-title az-content reveal">Müraciət edin</h2>
-      <h2 class="sec-title en-content reveal">Reach out to us</h2>
-      <p class="sec-desc az-content reveal" style="margin-bottom:36px;">İT ehtiyaclarınızı bizə bildirin. Pulsuz konsultasiya üçün əlaqə saxlayın.</p>
-      <p class="sec-desc en-content reveal" style="margin-bottom:36px;">Tell us about your IT needs. Contact us for a free consultation.</p>
+      <h2 class="sec-title az-c reveal">Müraciət edin</h2>
+      <h2 class="sec-title en-c reveal">Reach out to us</h2>
+      <p class="sec-desc az-c reveal" style="margin-bottom:32px;">IT ehtiyaclarınızı bizə bildirin. Pulsuz konsultasiya üçün əlaqə saxlayın.</p>
+      <p class="sec-desc en-c reveal" style="margin-bottom:32px;">Tell us about your IT needs. Contact us for a free consultation.</p>
       <div class="cnt-item reveal">
         <div class="cnt-icon"><i class="fa-solid fa-location-dot"></i></div>
         <div>
-          <div class="cnt-lbl az-content">Ünvan</div>
-          <div class="cnt-lbl en-content">Address</div>
+          <div class="cnt-lbl az-c">Ünvan</div><div class="cnt-lbl en-c">Address</div>
           <div class="cnt-val">Bakı, Azərbaycan</div>
         </div>
       </div>
       <div class="cnt-item reveal">
         <div class="cnt-icon"><i class="fa-solid fa-phone"></i></div>
         <div>
-          <div class="cnt-lbl az-content">Telefon</div>
-          <div class="cnt-lbl en-content">Phone</div>
-          <div class="cnt-val">+994 50 820 22 58</div>
+          <div class="cnt-lbl az-c">Telefon</div><div class="cnt-lbl en-c">Phone</div>
+          <div class="cnt-val"><a href="tel:+994508202258">+994 50 820 22 58</a></div>
         </div>
       </div>
       <div class="cnt-item reveal">
-        <div class="cnt-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="cnt-icon"><i class="fa-brands fa-whatsapp"></i></div>
         <div>
-          <div class="cnt-lbl">Email</div>
-          <div class="cnt-val"><a href="mailto:info@hybridlab.com.az">info@hybridlab.com.az</a></div>
-        </div>
-      </div>
-      <div class="cnt-item reveal">
-        <div class="cnt-icon"><i class="fa-solid fa-share-nodes"></i></div>
-        <div>
-          <div class="cnt-lbl az-content">Sosial Media</div>
-          <div class="cnt-lbl en-content">Social Media</div>
-          <div style="display:flex;gap:10px;margin-top:4px;flex-wrap:wrap;">
-            <a href="https://wa.me/994508202258" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.3);color:#25d366;text-decoration:none;font-size:13px;font-weight:700;">
-              <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a href="https://instagram.com/hybridlab.com.az" target="_blank" style="display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.3);color:#e1306c;text-decoration:none;font-size:13px;font-weight:700;">
-              <i class="fa-brands fa-instagram"></i> Instagram
-            </a>
+          <div class="cnt-lbl">WhatsApp</div>
+          <div class="cnt-val">
+            <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir" target="_blank">+994 50 820 22 58</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="cnt-form reveal">
+    <form class="cnt-form reveal" name="contact" method="POST" netlify netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none;"><input name="bot-field"></p>
       <div class="f-row">
         <div class="f-group">
-          <label class="f-lbl az-content">Ad Soyad</label>
-          <label class="f-lbl en-content">Full Name</label>
-          <input class="f-input" type="text" name="name" placeholder="Ad Soyad">
+          <label class="f-lbl az-c">Ad Soyad</label>
+          <label class="f-lbl en-c">Full Name</label>
+          <input class="f-input" type="text" name="name" required placeholder="Ad Soyad">
         </div>
         <div class="f-group">
-          <label class="f-lbl az-content">Şirkət</label>
-          <label class="f-lbl en-content">Company</label>
+          <label class="f-lbl az-c">Şirkət</label>
+          <label class="f-lbl en-c">Company</label>
           <input class="f-input" type="text" name="company" placeholder="Şirkət adı">
         </div>
       </div>
       <div class="f-group">
         <label class="f-lbl">Email</label>
-        <input class="f-input" type="email" name="email" placeholder="info@sirket.az">
+        <input class="f-input" type="email" name="email" required placeholder="email@nümunə.az">
       </div>
       <div class="f-group">
-        <label class="f-lbl az-content">Telefon</label>
-        <label class="f-lbl en-content">Phone</label>
+        <label class="f-lbl az-c">Telefon</label>
+        <label class="f-lbl en-c">Phone</label>
         <input class="f-input" type="tel" name="phone" placeholder="+994 XX XXX XX XX">
       </div>
       <div class="f-group">
-        <label class="f-lbl az-content">Mesajınız</label>
-        <label class="f-lbl en-content">Your Message</label>
-        <textarea class="f-textarea" name="message" placeholder="İT ehtiyaclarınız haqqında qısaca yazın..."></textarea>
+        <label class="f-lbl az-c">Mesajınız</label>
+        <label class="f-lbl en-c">Your Message</label>
+        <textarea class="f-textarea" name="message" required placeholder="IT ehtiyaclarınız haqqında qısaca yazın..."></textarea>
       </div>
       <button class="f-submit" type="submit">
-        <span class="az-content">Göndər →</span>
-        <span class="en-content">Send Message →</span>
+        <span class="az-c">Sorğu göndər →</span>
+        <span class="en-c">Send request →</span>
       </button>
-    </div>
+    </form>
   </div>
 </section>
 
 <!-- FLOATING -->
 <div class="float-social">
-  <a href="https://wa.me/994554502258" target="_blank" class="float-btn fb-wa" title="WhatsApp">
+  <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir" target="_blank" class="float-btn fb-wa" title="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
   <a href="https://instagram.com/hybridlab.com.az" target="_blank" class="float-btn fb-ig" title="Instagram">
@@ -526,17 +659,48 @@ body.lang-en .hero-az{display:none;}
   </a>
 </div>
 
+<!-- FOOTER -->
 <footer>
-  <div class="f-logo">HYBRIDLAB<span>.COM.AZ</span></div>
-  <div class="f-copy">2024 HYBRIDLAB.COM.AZ — ALL RIGHTS RESERVED</div>
-  <div class="f-links">
-    <a href="#why"><span class="az-content">Niyə İT?</span><span class="en-content">Why IT?</span></a>
-    <a href="#services"><span class="az-content">Xidmətlər</span><span class="en-content">Services</span></a>
-    <a href="#contact"><span class="az-content">Əlaqə</span><span class="en-content">Contact</span></a>
+  <div class="footer-top">
+    <div>
+      <div class="f-logo">HYBRIDLAB<span>.COM.AZ</span></div>
+      <div class="f-tagline az-c">İT İnfrastruktur, Server İdarəetməsi və Texniki Dəstək Xidmətləri</div>
+      <div class="f-tagline en-c">IT Infrastructure, Server Administration and Technical Support Services</div>
+    </div>
+    <div class="f-nav-col">
+      <h4 class="az-c">Xidmətlər</h4>
+      <h4 class="en-c">Services</h4>
+      <a href="#services" class="az-c">Server & İnfrastruktur</a>
+      <a href="#services" class="az-c">Virtualizasiya</a>
+      <a href="#services" class="az-c">Backup İdarəetməsi</a>
+      <a href="#services" class="az-c">Texniki Dəstək</a>
+      <a href="#services" class="az-c">Video Müşahidə & Giriş</a>
+      <a href="#services" class="en-c">Server & Infrastructure</a>
+      <a href="#services" class="en-c">Virtualization</a>
+      <a href="#services" class="en-c">Backup Management</a>
+      <a href="#services" class="en-c">Technical Support</a>
+      <a href="#services" class="en-c">Video Surveillance & Access</a>
+    </div>
+    <div class="f-nav-col">
+      <h4 class="az-c">Keçidlər</h4>
+      <h4 class="en-c">Navigation</h4>
+      <a href="#about" class="az-c">Haqqımızda</a>
+      <a href="#tech" class="az-c">Texnologiyalar</a>
+      <a href="#why" class="az-c">Niyə bizi seçin</a>
+      <a href="#contact" class="az-c">Əlaqə</a>
+      <a href="#about" class="en-c">About</a>
+      <a href="#tech" class="en-c">Technologies</a>
+      <a href="#why" class="en-c">Why choose us</a>
+      <a href="#contact" class="en-c">Contact</a>
+    </div>
+    </div>
+  <div class="footer-bottom">
+    <div class="f-copy">© 2024 HYBRIDLAB.COM.AZ — ALL RIGHTS RESERVED</div>
+    
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function setLang(lang) {
   if (lang === 'en') {
     document.body.className = 'lang-en';
@@ -544,29 +708,49 @@ function setLang(lang) {
     document.body.className = '';
   }
   var btns = document.querySelectorAll('.lang-btn');
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].classList.remove('active');
+  btns[0].classList.remove('active');
+  btns[1].classList.remove('active');
+  btns[lang === 'en' ? 1 : 0].classList.add('active');
+
+  // Explicitly handle all az-c / en-c elements
+  var azEls = document.querySelectorAll('.az-c');
+  var enEls = document.querySelectorAll('.en-c');
+  for (var i = 0; i < azEls.length; i++) {
+    azEls[i].style.display = lang === 'en' ? 'none' : '';
   }
-  if (lang === 'en') {
-    btns[1].classList.add('active');
-  } else {
-    btns[0].classList.add('active');
+  for (var i = 0; i < enEls.length; i++) {
+    enEls[i].style.display = lang === 'en' ? '' : 'none';
+  }
+  // Hero titles
+  var heroAz = document.querySelectorAll('.hero-az');
+  var heroEn = document.querySelectorAll('.hero-en');
+  for (var i = 0; i < heroAz.length; i++) {
+    heroAz[i].style.display = lang === 'en' ? 'none' : 'block';
+  }
+  for (var i = 0; i < heroEn.length; i++) {
+    heroEn[i].style.display = lang === 'en' ? 'block' : 'none';
+  }
+  // Flex elements
+  var azF = document.querySelectorAll('.az-f');
+  var enF = document.querySelectorAll('.en-f');
+  for (var i = 0; i < azF.length; i++) {
+    azF[i].style.display = lang === 'en' ? 'none' : 'flex';
+  }
+  for (var i = 0; i < enF.length; i++) {
+    enF[i].style.display = lang === 'en' ? 'flex' : 'none';
   }
 }
 
-// Scroll Reveal
-var reveals = document.querySelectorAll('.reveal');
-var observer = new IntersectionObserver(function(entries) {
+var obs = new IntersectionObserver(function(entries) {
   for (var i = 0; i < entries.length; i++) {
     if (entries[i].isIntersecting) {
       entries[i].target.classList.add('visible');
-      observer.unobserve(entries[i].target);
+      obs.unobserve(entries[i].target);
     }
   }
 }, { threshold: 0.1 });
-for (var i = 0; i < reveals.length; i++) {
-  observer.observe(reveals[i]);
-}
+var els = document.querySelectorAll('.reveal');
+for (var i = 0; i < els.length; i++) { obs.observe(els[i]); }
 </script>
 </body>
 </html>
