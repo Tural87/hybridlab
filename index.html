@@ -210,7 +210,7 @@ body.lang-en .hero-az{display:none;}
       <a href="https://instagram.com/hybridlab.com.az" target="_blank" class="ig">
         <i class="fa-brands fa-instagram"></i><span>Instagram</span>
       </a>
-      <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir" target="_blank" class="wa">
+      <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir?" target="_blank" class="wa">
         <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
       </a>
     </div>
@@ -614,7 +614,7 @@ body.lang-en .hero-az{display:none;}
         <div>
           <div class="cnt-lbl">WhatsApp</div>
           <div class="cnt-val">
-            <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir" target="_blank">+994 50 820 22 58</a>
+            <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir?" target="_blank">+994 50 820 22 58</a>
           </div>
         </div>
       </div>
@@ -626,27 +626,27 @@ body.lang-en .hero-az{display:none;}
         <div class="f-group">
           <label class="f-lbl az-c">Ad Soyad</label>
           <label class="f-lbl en-c">Full Name</label>
-          <input class="f-input" type="text" name="name" required placeholder="Ad Soyad">
+          <input class="f-input" type="text" name="name" required placeholder="Ad Soyad" data-ph-az="Ad Soyad" data-ph-en="Full Name">
         </div>
         <div class="f-group">
           <label class="f-lbl az-c">Şirkət</label>
           <label class="f-lbl en-c">Company</label>
-          <input class="f-input" type="text" name="company" placeholder="Şirkət adı">
+          <input class="f-input" type="text" name="company" placeholder="Şirkət adı" data-ph-az="Şirkət adı" data-ph-en="Company name">
         </div>
       </div>
       <div class="f-group">
         <label class="f-lbl">Email</label>
-        <input class="f-input" type="email" name="email" required placeholder="email@nümunə.az">
+        <input class="f-input" type="email" name="email" required placeholder="email@nümunə.az" data-ph-az="email@nümunə.az" data-ph-en="email@example.com">
       </div>
       <div class="f-group">
         <label class="f-lbl az-c">Telefon</label>
         <label class="f-lbl en-c">Phone</label>
-        <input class="f-input" type="tel" name="phone" placeholder="+994 XX XXX XX XX">
+        <input class="f-input" type="tel" name="phone" placeholder="+994 XX XXX XX XX" data-ph-az="+994 XX XXX XX XX" data-ph-en="+994 XX XXX XX XX">
       </div>
       <div class="f-group">
         <label class="f-lbl az-c">Mesajınız</label>
         <label class="f-lbl en-c">Your Message</label>
-        <textarea class="f-textarea" name="message" required placeholder="IT ehtiyaclarınız haqqında qısaca yazın..."></textarea>
+        <textarea class="f-textarea" name="message" required placeholder="IT ehtiyaclarınız haqqında qısaca yazın..." data-ph-az="IT ehtiyaclarınız haqqında qısaca yazın..." data-ph-en="Briefly describe your IT needs..."></textarea>
       </div>
       <button class="f-submit" type="submit">
         <span class="az-c">Sorğu göndər →</span>
@@ -658,7 +658,7 @@ body.lang-en .hero-az{display:none;}
 
 <!-- FLOATING -->
 <div class="float-social">
-  <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir" target="_blank" class="float-btn fb-wa" title="WhatsApp">
+  <a href="https://wa.me/994508202258?text=Salam%20IT%20xidmeti%20lazimdir?" target="_blank" class="float-btn fb-wa" title="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
   <a href="https://instagram.com/hybridlab.com.az" target="_blank" class="float-btn fb-ig" title="Instagram">
@@ -746,6 +746,14 @@ function setLang(lang) {
   for (var i = 0; i < enF.length; i++) {
     enF[i].style.display = lang === 'en' ? 'flex' : 'none';
   }
+  // Switch placeholders
+  var phEls = document.querySelectorAll('[data-ph-az]');
+  for (var i = 0; i < phEls.length; i++) {
+    phEls[i].placeholder = lang === 'en' ? phEls[i].getAttribute('data-ph-en') : phEls[i].getAttribute('data-ph-az');
+  }
+  // Switch submit button
+  var submitBtn = document.querySelector('.f-submit');
+  if (submitBtn) { submitBtn.innerHTML = lang === 'en' ? 'Send request →' : 'Sorğu göndər →'; }
 }
 
 var obs = new IntersectionObserver(function(entries) {
